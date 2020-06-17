@@ -1,0 +1,32 @@
+<%- include("../partials/header") %>
+<div class=" user-page-container">
+    <div class="row userPage">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-4 user-details">
+            <h1><%=user.firstName %> <%= user.lastName %></h1>
+            <div class="thumbnail">
+                <img class="img img-fluid" src="<%= user.avatar %>" alt="user profile image">
+            </div>
+            <div class="caption">
+                <p class="details"><%= user.about %></p>
+                <p>Contact -<a href="mailto:<%= user.email %>"><%=user.email%></a></p>
+            </div>
+        </div>
+        <div class="col-md-6 user-blogs">
+            <h1><%=user.username%>'s blogs:</h1>
+            <ul>
+                <% blogs.forEach(function(blog){ %>
+                <li>
+                    <p>
+                        <%=blog.title %>
+                    </p>
+                    <span><a href="/blogs/<%=blog.id %>">Read <i class="fas fa-greater-than "></i></a></span>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") %>

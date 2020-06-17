@@ -1,0 +1,197 @@
+.body {
+    background: url("https://mewallpaper.com/thumbnail/abstract/3939-minimal-light-pink-and-teal-background-with-headphones-hd-image-free-wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-page .jumbotron {
+    background-image: url("https://images.unsplash.com/photo-1441034281545-78296c3a6934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.home-page .jumbotron .headingGroup {
+    font-size: 48px;
+    text-align: center;
+    color: #111e6c;
+    font-weight: 800;
+}
+
+.home-page .jumbotron .headingGroup a {
+    background: #adefd1ff;
+    color: #111e6c;
+    margin: 0;
+}
+
+.home-page .form-group {
+
+    color: #111e6c;
+}
+
+.home-page .form-group input {
+    width: 300px;
+}
+
+.home-page .form-group .btn {
+    margin: 10px;
+    background-color: #adefd1ff;
+    color: #111e6c;
+}
+
+.home-page .single-blog {
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-page .single-blog img {
+    width: 100%;
+    height: 200px;
+}
+
+.home-page .blog-meta {
+    font-size: 14px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    float: left;
+
+}
+
+.home-page .single-blog span {
+    font-size: 14px;
+    color: cornflowerblue;
+}
+
+.home-page .single-blog .blog-text {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.home-page .single-blog h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #007bff;
+
+}
+
+.home-page .single-blog .read-more-button {
+    background-image: linear-gradient(to right, #1c03b5, #5c8bef);
+    padding: 5px 12px 8px;
+    border-radius: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+}
+
+.home-page .single-blog .read-more-button:hover {
+    background-image: linear-gradient(to right, #006417, #00b128);
+    text-decoration: none;
+    color: #fff;
+}
+
+.show-page {
+    margin-top: 10px;
+}
+
+.show-page .thumbnail img {
+    margin-top: 0;
+    padding-bottom: 20px;
+    width: 80%;
+    height: auto;
+}
+
+.show-page .caption-full {
+    padding: 20px;
+}
+
+.show-page .caption-full p em {
+    text-transform: capitalize;
+}
+
+.show-page .caption-full .details {
+    white-space: pre-line;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.show-page .btn {
+    color: white;
+}
+
+.show-page .well {
+    font-family: 'Poppins', sans-serif;
+}
+
+.show-page .delete-form {
+    display: inline;
+}
+
+.user-page-container {
+    padding: 20px;
+}
+
+.user-page-container .user-details h1 {
+    text-align: center;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.user-page-container .user-details .thumbnail .img {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+}
+
+.user-page-container .user-details .caption {
+    padding: 10px 20px;
+}
+
+.user-page-container .user-details p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.user-page-container .user-details .details {
+    white-space: pre-line;
+}
+
+.user-page-container .user-blogs h1 {
+    text-transform: capitalize;
+    position: absolute;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.user-page-container .user-blogs ul {
+    position: relative;
+    width: auto;
+    margin: 100px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.user-page-container .user-blogs ul li {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    color: #000;
+    margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.user-page-container .user-blogs span a {
+    text-align: right;
+    float: right;
+}

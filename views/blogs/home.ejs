@@ -1,0 +1,40 @@
+<%- include("../partials/header") %>
+<div class="container home-page">
+    <div class="jumbotron">
+        <div class="container headingGroup">
+            <h1><i class="fas fa-blog"></i> Welcome To †hê §wïrll Qµïll!!!</h1>
+            <a class="btn btn-lg" href="/blogs/new">Add a New Blog</a>
+            </p>
+        </div>
+        <form action="/blogs" method="GET" class="form-inline">
+            <div class="form-group">
+                <input type="text" name="search" placeholder="Blog search..." class="form-control">
+                <button class="btn" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+    <div class="conatiner home-container">
+        <div class="row text-center">
+            <% blogs.forEach(function(blog){ %>
+            <div class="col-md-4">
+                <div class="single-blog">
+                    <p class="blog-meta">Blog by - <%=blog.author.username %>
+                    </p>
+                    <span class="float-right"><%= blog.created.toDateString() %>
+                    </span>
+                    <img class="img-fluid" src="<%= blog.image %>" alt="Responsive image">
+                    <h4><%= blog.title %></h4>
+                    <p class="blog-text"><%= blog.body.substring(0,90) %>...</p>
+                    <p>
+                        <a class="btn read-more-button" href="/blogs/<%= blog._id %>">Read More <i
+                                class="fas fa-greater-than"></i></a>
+                    </p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../partials/footer") %>

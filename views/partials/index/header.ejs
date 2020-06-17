@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d25a039e29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css" type="text/css">
+    <title>The Swirll Quill</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="head my-3">
+            <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <span><i class="fas fa-blog"> †hê §wïrll Qµïll</i> </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span><img src="assets/images/menu.png" alt=""></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About us</a>
+                        </li>
+                        <% if(!currentUser){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Signup</a>
+                        </li>
+                        <% }else{ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Signed In as <%= currentUser.username %></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row custom-section d-flex align-items-center">
+            <div class="col-12 col-lg-4">
+                <h3>†hê §wïrll</h3>
+                <h3 style="padding-left: 127px;"> Qµïll</h3>
+                <h5>A Website For Bloggers....</h5>
+                <a href="/blogs">Get Started</a>
+            </div>
+            <div class="col-12 col-lg-8">
+                <img src="https://images.unsplash.com/photo-1544716278-f5bc5c630851?ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80"
+                    alt="Team process banner">
+            </div>
+        </div>
+    </div>
+    <% if(error && error.length > 0){ %>
+    <div style="margin: 0;" class="alert alert-danger" role="alert">
+        <h5><%= error %></h5>
+    </div>
+    <%} %>
+    <% if(success && error.success > 0){ %>
+    <div style="margin: 0;" class="alert alert-success" role="alert">
+        <h5><%= success %></h5>
+    </div>
+    <%} %>

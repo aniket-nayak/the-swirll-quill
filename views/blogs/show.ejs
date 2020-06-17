@@ -1,0 +1,60 @@
+<%- include("../partials/header") %>
+<div class="conatainer">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10 show-page">
+            <div class="thumbnail">
+                <img class="rounded mx-auto d-block img-responsive img-fluid" src="<%= blog.image %>">
+                <div class="caption-full">
+                    <span class="float-right"><%= blog.created.toDateString() %> </span>
+                    <h2 style="font-family: 'Hammersmith One', sans-serif;"><%=blog.title%></h2>
+                    <p class="details">
+                        <%=blog.body%>
+                    </p>
+                    <p>
+                        <b><em>Submitted By - <a href="/users/<%= blog.author.id %>"><%= blog.author.username %></a>
+                            </em></b>
+                    </p>
+                    <% if(currentUser && blog.author.id.equals(currentUser._id)) { %>
+                    <a class="btn btn-warning" href="/blogs/<%= blog._id %>/edit"><i class="far fa-edit"></i> Edit</a>
+                    <form class="delete-form" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger btn-group-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                    </form>
+                    <% } %>
+                    <a class="btn btn-success" href="/blogs/<%=blog._id%>/comments/new"><i class="fas fa-comment"></i>
+                        Comment</a>
+                </div>
+            </div>
+            <hr>
+            <h4 style="font-family: 'Hammersmith One', sans-serif;">Comments :-</h4>
+            <% blog.comments.forEach(function(comment){ %>
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-12">
+                        <strong><%=comment.author.username %> :-</strong>
+                        <span class="float-right"><%= comment.author.created.toDateString() %> </span>
+                        <p><%= comment.text %></p>
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                        <a href="/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit"
+                            class="btn btn-sm btn-warning"><i class="far fa-edit"></i>
+                            Edit
+                        </a>
+                        <form class="delete-form"
+                            action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Delete</button>
+                        </form>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <% })%>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

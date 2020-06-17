@@ -1,0 +1,38 @@
+<%- include("../partials/form/header") %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 d-none d-md-block image-container">
+
+        </div>
+        <div class="col-lg-6 col-md-6 form-container">
+            <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+                <div class="heading mb-4">
+                    <h3> <i class="fas fa-plus"></i> Blog</h3>
+                </div>
+                <form action="/blogs" method="post" enctype="multipart/form-data">
+                    <div class="form-input">
+                        <span><i class="fab fa-blogger-b"></i></span>
+                        <input type="text" name="blog[title]" placeholder="Title" required>
+                    </div>
+                    <div class="form-input">
+                        <p>Upload Photo/gif</p>
+                        <span><i style="position: relative;margin-top: 38px;" class="fas fa-image"></i></span>
+                        <input type="file" name="image" required>
+                    </div>
+                    <div class="form-input">
+                        <span> <i class="fas fa-pen"></i></span>
+                        <textarea id="newTextarea" name="blog[body]" cols="56" rows="6"
+                            placeholder="Your blog goes here.." required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Create</button>
+                    </div>
+                    <div style="color: #777;"><a class="btn btn-success" href="/blogs">Go back</a></div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<%- include("../partials/footer") %>

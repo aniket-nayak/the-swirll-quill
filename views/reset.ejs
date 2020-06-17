@@ -1,0 +1,32 @@
+<%- include("partials/form/header") %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 d-none d-md-block image-container">
+
+        </div>
+        <div class="col-lg-6 col-md-6 form-container">
+            <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+                <div class="heading mb-4">
+                    <h3>Reset Password</h3>
+                </div>
+                <form action="/reset/<%= token %>" method="post">
+                    <div class="form-input">
+                        <span> <i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <input type="password" name="password" placeholder="New Password" autofocus="autofocus"
+                            required>
+                    </div>
+                    <div class="form-input">
+                        <span> <i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <input type="password" name="confirm" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Update Password</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<%- include("partials/footer") %>
