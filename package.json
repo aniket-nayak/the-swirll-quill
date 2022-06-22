@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "Router": "^2.1.0",
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "body-parser": "^1.19.0",
     "cloudinary": "^1.22.0",
     "connect-flash": "^0.1.1",
